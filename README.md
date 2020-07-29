@@ -1,6 +1,6 @@
-# 闺蜜问题 （To Solve WebSocket Broadcasting Cost Problem）
+# 闺蜜问题 （To Solve WebSocket's Broadcasting Cost Problem）
 
-![concept](https://github.com/thejourneyofman/girlssecret/blob/master/images/concept.png)
+![Concept](https://raw.githubusercontent.com/thejourneyofman/girlssecret/master/images/concept.png)
 
 ##### 一个正方形网格的每一个房间里住着一位闺蜜。
 ##### 每一个闺蜜(M)和相邻的闺蜜(M0-M2和O) 要么保持通话状态要么保持窃听状态,但同时只能与一位通话或窃听其中一位。
@@ -9,3 +9,5 @@
 ##### 终止条件：每一位闺蜜都后悔八卦，所以只会传一次，比如通过O2,O20和O0的传话再次回到O的时候，O不会再传给其他闺蜜了。
 ##### 给出闺蜜M和T的房间号(M = (2,1), T=(6,6))和网络边长(N=6)
 ##### （Q）请问坏话传到闺蜜T的概率是多少。
+
+Copyright (c) 2020 Chao (Chase) Xu
