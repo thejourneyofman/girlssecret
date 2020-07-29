@@ -1,6 +1,6 @@
 # 闺蜜问题 （To Solve WebSocket Broadcasting Cost Problem）
 
-![concept](https://github.com/thejourneyofman/girlssecret/blob/master/concept.png)
+![concept](https://github.com/thejourneyofman/girlssecret/blob/master/images/concept.png)
 
 ##### 一个正方形网格的每一个房间里住着一位闺蜜。
 ##### 每一个闺蜜(M)和相邻的闺蜜(M0-M2和O) 要么保持通话状态要么保持窃听状态,但同时只能与一位通话或窃听其中一位。
