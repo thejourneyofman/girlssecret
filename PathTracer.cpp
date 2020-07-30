@@ -14,10 +14,11 @@ namespace doinit{
     }
 }
 
+// A sample greedy solution for Q1.
 class PathTracer {
 public:
     PathTracer( vector<int> mysrc, vector<int> mydec )
-        : src( mysrc ), dec( mydec )
+        : src(mysrc), dec(mydec)
     {
     }
 
@@ -80,24 +81,21 @@ private:
 
   double do_calculate(vector<int> path) {
       double prob = 1.0;
-      for (int i = 0; i < path.size(); i++) {
+      for (int i = 0; i < path.size() - 1; i++) {
           printf(" %d", path[i]);
-          if (i == path.size()-1) {
-            continue;
-          }
-          else if (path[i] == 1 || path[i] == N || path[i] == N*N - 3) {
+          // Cells in the corners.
+          if (path[i] == 1 || path[i] == N || path[i] == N*N - N - 1) {
             prob *= 0.5;
           }
-
-          else if (((path[i] -1)/4) == 0 || (path[i] -N) <= 0 || (path[i]/4) == 0 || (path[i]- N*(N-1)) > 0){
+          // Cells on the boundaries.
+          else if (((path[i] -1)/N) == 0 || (path[i] -N) <= 0 || (path[i]/N) == 0 || (path[i]- N*(N-1)) > 0){
             prob /= 3;
           }
           else{
             prob *= 0.25;
           }
-
       }
-      printf(" Each Prob is %.11lf\n", prob);
+      printf(" Each Prob is %f\n", prob);
       return (prob);
   }
 };
@@ -106,10 +104,9 @@ private:
 int main()
 {
 	doinit::initArray();
-    vector<int> mysrc{ 0,1 };
+    vector<int> mysrc{ 2,1 };
     vector<int> mydec{ 6,6 };
     PathTracer myPT(mysrc, mydec);
     myPT.trace_all_paths();
-
 	return 0;
 }
