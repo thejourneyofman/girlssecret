@@ -95,7 +95,7 @@ private:
             prob *= 0.25;
           }
       }
-      printf(" Each Prob is %f\n", prob);
+      printf(" Each Prob is %.25lf\n", prob);
       return (prob);
   }
 };
